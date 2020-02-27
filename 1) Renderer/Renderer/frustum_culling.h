@@ -92,22 +92,22 @@ namespace end
 		float3 bottom_center = (near_bottom_left + near_bottom_right + far_bottom_left + far_bottom_right) / four;
 
 		// Draw Far
-		end::debug_renderer::add_line(far_top_left,    far_top_right,    { 1.0f, 0.0f, 0.0f, 1.0f });
-		end::debug_renderer::add_line(far_top_left,    far_bottom_left,  { 1.0f, 0.0f, 0.0f, 1.0f });
-		end::debug_renderer::add_line(far_top_right,   far_bottom_right, { 1.0f, 0.0f, 0.0f, 1.0f });
-		end::debug_renderer::add_line(far_bottom_left, far_bottom_right, { 1.0f, 0.0f, 0.0f, 1.0f });
+		end::debug_renderer::add_line(far_top_left,    far_top_right,    { 1.0f, 1.0f, 0.0f, 1.0f });
+		end::debug_renderer::add_line(far_top_left,    far_bottom_left,  { 1.0f, 1.0f, 0.0f, 1.0f });
+		end::debug_renderer::add_line(far_top_right,   far_bottom_right, { 1.0f, 1.0f, 0.0f, 1.0f });
+		end::debug_renderer::add_line(far_bottom_left, far_bottom_right, { 1.0f, 1.0f, 0.0f, 1.0f });
 
 		// Draw Near
-		end::debug_renderer::add_line(near_top_left,    near_top_right,    { 1.0f, 0.0f, 0.0f, 1.0f });
-		end::debug_renderer::add_line(near_top_left,    near_bottom_left,  { 1.0f, 0.0f, 0.0f, 1.0f });
-		end::debug_renderer::add_line(near_top_right,   near_bottom_right, { 1.0f, 0.0f, 0.0f, 1.0f });
-		end::debug_renderer::add_line(near_bottom_left, near_bottom_right, { 1.0f, 0.0f, 0.0f, 1.0f });
+		end::debug_renderer::add_line(near_top_left,    near_top_right,    { 1.0f, 1.0f, 0.0f, 1.0f });
+		end::debug_renderer::add_line(near_top_left,    near_bottom_left,  { 1.0f, 1.0f, 0.0f, 1.0f });
+		end::debug_renderer::add_line(near_top_right,   near_bottom_right, { 1.0f, 1.0f, 0.0f, 1.0f });
+		end::debug_renderer::add_line(near_bottom_left, near_bottom_right, { 1.0f, 1.0f, 0.0f, 1.0f });
 
 		// Draw Connection
-		end::debug_renderer::add_line(near_top_left,     far_top_left,     { 1.0f, 0.0f, 0.0f, 1.0f });
-		end::debug_renderer::add_line(near_top_right,    far_top_right,    { 1.0f, 0.0f, 0.0f, 1.0f });
-		end::debug_renderer::add_line(near_bottom_left,  far_bottom_left,  { 1.0f, 0.0f, 0.0f, 1.0f });
-		end::debug_renderer::add_line(near_bottom_right, far_bottom_right, { 1.0f, 0.0f, 0.0f, 1.0f });
+		end::debug_renderer::add_line(near_top_left,     far_top_left,     { 1.0f, 1.0f, 0.0f, 1.0f });
+		end::debug_renderer::add_line(near_top_right,    far_top_right,    { 1.0f, 1.0f, 0.0f, 1.0f });
+		end::debug_renderer::add_line(near_bottom_left,  far_bottom_left,  { 1.0f, 1.0f, 0.0f, 1.0f });
+		end::debug_renderer::add_line(near_bottom_right, far_bottom_right, { 1.0f, 1.0f, 0.0f, 1.0f });
 
 		// Draw Normal pointing in (Blue to white lerp)
 		end::debug_renderer::add_line(left_center, (left_center + (frustum[0].normal * dir_scalar)),     { 0.0f,0.0f,1.0f,1.0f }, { 1.0f,1.0f,1.0f,1.0f });
